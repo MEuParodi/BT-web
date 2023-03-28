@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Boat Trip</title>
+    <link rel="stylesheet" href="css/style2.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+
+<body>
+    <header>
+        <div class="logoContainer">
+            <img class="logoImage" src="images/logo2.png" alt="logo">
+        </div>
+        <div class="fondoLetrasLogo">
+            <img class="logoName" src="images/logoName.jpg" alt="Nombre Empresa">
+        </div>
+        <nav>
+            <img class="iconoMenu" src="images/menuIcon.png" alt="Icono menú">
+            <ul class="listaMenu">
+                <li><a href="home.html">home</a></li>
+                <li><a href="contacto.html">contactanos</a></li>
+                <li><a href="nosotros.html">nosotros</a></li>
+                <li><a href="servicios.html">servicios</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <seccion>
+        <h1 class="tituloSeccion">Contanos de vos</h1>
+        <div class="central">
+            <form class="formContacto">
+                <input class="formElement" type="text" id="nombre" name="nombre" placeholder="nombre">
+                <div class="errorForm" id="errorName"></div>
+                <input class="formElement" type="text" id="apellido" name="apellido" placeholder="Apellido">
+                <div class="errorForm" id="errorApellido"></div>
+                <input class="formElement" type="email" id="email" name="email" placeholder="mail">
+                <div class="errorForm" id="errorMail"></div>
+                <div>
+                    <label class="parrafoForm" for="expAnteriores">Experiencias anteriores:</label>
+                    <select class="formElement" name="expAnteriores">
+                        <option value=""> --- seleccione uno --- </option>
+                        <option value=""> he navegado otras veces </option>
+                        <option value=""> nunca navegué </option>
+                    </select>
+                </div>
+                <div>
+                    <label class="parrafoForm" for="timonel">Sos de timonel de yate?:</label>
+                    <input class="checkBoxExperiencias" type="radio" name="timonel" value="si"> si
+                    <input class="checkBoxExperiencias" type="radio" name="timonel" value="no"> no
+                </div>
+                <p class="parrafoForm">Contanos que experiencias te gustarían más:</p>
+                <div class="parrafoForm">
+                    <input type="checkbox" name="MedioDia" value=""> Experiencia de medio día <br>
+                    <input type="checkbox" name="diaCompleto" value=""> Experiencia de día completo <br>
+                    <input type="checkbox" name="colonia" value=""> Navegación a Colonia, Uruguay <br>
+                    <input type="checkbox" name="Momentos" value=""> Vivir un momento especial y único <br>
+                </div>
+                <p class="parrafoForm">Ingresa este código para mostrarme que no sos un robot</p>
+                <div class="captchaContainer">
+                    <div class="captcha">
+                        <span id="captchaPlace">ABCD</span><br>
+                        <input type="button" id="refresh" value="Cambiar código" />
+                    </div>
+                    <div>
+                        <input class="textInput" type="text" id="txtInput" value="" />
+                    </div>
+                </div>
+                <div class="errorForm" id="formResult"></div>
+                <div class="errorForm" id="captchaResult"></div>
+                <input class="sendFormButton" id="sendButton" type="button" value="Enviar formulario" />
+            </form>
+        </div>
+        </div>
+    </seccion>
+
+    <script type "text/javscript" src="js/contacto.js"></script>
+    <script type "text/javscript" src="js/menu.js"></script>
+</body>
+
+</html>

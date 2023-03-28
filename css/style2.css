@@ -1,0 +1,446 @@
+body {
+    font-family: 'Raleway', sans-serif, Verdana, Tahoma, sans-serif;
+    color: rgb(44, 50, 50);
+}
+
+/****** header *****/
+
+.iconoMenu {
+    width: 40px;
+    margin-bottom: 0px;
+    position: relative;
+    right: 20px;
+}
+
+nav ul {
+    display: none;
+}
+
+nav.show ul {
+    display: flex;
+    flex-direction: column;
+    font-size: small;
+    padding-left: 0px;
+    list-style: none;
+}
+
+nav ul li {
+    padding: 10px;
+    font-size: initial;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+header {
+    justify-content: left;
+    background-color: rgb(211, 18, 18);
+}
+
+.logoContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.logoImage {
+    width: 60px;
+    margin-left: 10px;
+    padding: 10px;
+}
+
+.fondoLetrasLogo {
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+}
+
+.logoName {
+    width: 200px;
+}
+
+/****** secciones *****/
+
+h1.tituloSeccion {
+    display: flex;
+    justify-content: center;
+    font-size: large;
+    color: rgb(211, 18, 18);
+    margin-bottom: 30px;
+}
+
+.central {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.clientes {
+    padding: 5px;
+}
+
+.nosotros {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nosotros p {
+    color: rgb(125, 122, 122);
+    text-align: justify;
+    font-size: smaller;
+    width: 90%;
+}
+
+.foto {
+    max-height: 250px;
+    max-width: 300px;
+}
+
+.tituloOpcion {
+    font-size: smaller;
+    color: rgb(1, 16, 15);
+    text-transform: uppercase;
+}
+
+.parrafoGris {
+    text-align: justify;
+    font-size: smaller;
+    color: rgb(125, 122, 122);
+    max-width: 300px;
+}
+
+.masInfo {
+    text-transform: uppercase;
+    font-size: x-small;
+    color: rgb(74, 79, 79);
+}
+
+
+/*********** formularios *****************/
+
+.formContacto {
+    background-color: rgb(217, 215, 215);
+    padding: 10px;
+   max-width: 100%;
+}
+
+.formServicios {
+    background-color:  rgb(217, 215, 215);
+    padding: 10px;
+}
+
+.formContacto, .formServicios label {
+    padding-left: 10px;
+    font-size: smaller;
+    color: rgb(125, 122, 122);
+}
+
+.botones {
+    display: inline;
+}
+
+.botonRojo {
+    margin: 10px;
+    padding: 3px;
+    border-radius: 5px;
+    border: solid 1px red;
+    background-color: rgb(211, 18, 18);
+    color: white;
+}
+
+.botonRojo:hover {
+    cursor: pointer;
+    box-shadow: 2px 2px 5px rgb(68, 66, 66);
+}
+
+.botonBlanco {
+    margin: 10px;
+    padding: 3px;
+    border-radius: 5px;
+    border: solid 1px red;
+    background-color: white;
+}
+
+.botonBlanco:hover {
+    cursor: pointer;
+    box-shadow: 2px 2px 5px rgb(68, 66, 66);
+}
+
+.parrafoFormClientes {
+    padding-left: 10px;
+    font-size: smaller;
+    color: rgb(125, 122, 122);
+    width: 85%;
+    display: inline;
+}
+
+.oculto {
+    display: none;
+}
+
+.boton {
+    margin-left: 6px;
+}
+
+.parrafoForm {
+    padding-left: 10px;
+    /* font-size: smaller; */
+    color: rgb(125, 122, 122);
+    width: 85%;
+}
+
+.formElement {
+    margin: 10px;
+    border-radius: 5px;
+    padding: 10px;
+    border: rgb(54, 53, 53);
+    width: 85%;
+}
+
+.checkBoxExperiencias {
+    margin-left: 20px;
+}
+
+.errorForm {
+    color: rgb(211, 18, 18);
+    margin-left: 15px;
+    margin-bottom: 8px;
+}
+
+.captchaContainer {
+    width: 20%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-left: 15px;
+}
+
+.captcha {
+    text-align: center;
+    font-size: x-large;
+    font-style: italic;
+    background-color: white;
+    border-radius: 5px;
+    border: rgb(54, 53, 53);
+    margin-bottom: 15px;
+    padding: 10px;
+}
+
+.textInput {
+    border-radius: 5px;
+    border: rgb(54, 53, 53);
+    margin-left: 25px;
+    margin-bottom: 15px;
+    max-width: 20%;
+    padding: 26px;
+    font-size: x-large;
+    font-style: italic;
+}
+
+.sendFormButton {
+    margin-left: 15px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    padding: 15px;
+    background-color: rgb(211, 18, 18);
+    border-radius: 5px;
+    border: rgb(54, 53, 53);
+    color: white;
+}
+
+.botonesFormulario {
+    margin-top: 15px;
+}
+
+/*********** servicios *****************/
+
+.material-icons {
+    margin-right: 10px;
+}
+
+h2.subSeccion {
+    height: 40px;
+    background-color: rgb(211, 18, 18);
+    color: white;
+    display: flex;
+    align-items: center;
+    font-size: medium;
+    padding-left: 10px;
+}
+
+ul.listaServicios {
+    list-style: none;
+}
+
+ul.listaServicios li a {
+    text-decoration: none;
+    color: #2F4F4F;
+    font-size: small;
+}
+
+ul.listaServicios li a:hover {
+    color: rgb(211, 18, 18);
+    font-size: medium;
+}
+
+table.tarifas {
+    width: 100%;
+    padding: 10px;
+    font-size: smaller;
+    margin-top: 10px;
+}
+
+table.tarifas th,
+td {
+    text-align: left;
+    box-shadow: 2px 2px 5px rgb(224, 214, 214);
+    padding: 5px;
+}
+
+.scroll {
+    height: 200px;
+    width: 350px;
+    overflow-y: auto;
+}
+
+.servicio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.contenedorDescripcionServicios {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.servDesc {
+    font-size: smaller;
+    color: rgb(125, 122, 122);
+    width: fit-content;
+}
+
+.descServLarga {
+    text-align: justify;
+    font-size: smaller;
+    color: rgb(125, 122, 122);
+    width: 90%;
+}
+
+.iconInTable {
+    width: 15px;
+}
+
+.iconInTable:hover {
+    box-shadow: 0 0 5px rgb(215, 13, 13);
+    cursor: pointer;
+}
+
+/*********** filtros tabla dinamica *****************/
+
+.containerFiltros label {
+    margin-left: 10px;
+    font-size: smaller;
+
+}
+
+.containerFiltros {
+    border: solid 1px grey;
+    box-shadow: 2px 2px 5px rgb(224, 214, 214);
+    padding-top: 5px;
+    padding-bottom: 10px;
+}
+
+.filtro {
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.filtro select{
+ margin-bottom: 3px;
+ height: 25px;
+}
+
+.paginacion {
+    display: flex; 
+    justify-content: right;
+}
+
+.botonPaginar {
+    box-shadow: 2px 2px 5px rgb(224, 214, 214);
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+
+.botonPaginar:hover {
+    cursor: pointer;
+    box-shadow: 2px 2px 5px rgb(68, 66, 66);
+}
+
+
+/*layout para desktop*/
+
+@media only screen and (min-width:400px) {
+    .iconoMenu {
+        display: none;
+    }
+
+    .servicio {
+        flex-direction: row;
+        margin-left: 30px;
+
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        padding-left: 0px;
+        list-style: none;
+        background-color: rgb(56, 56, 57);
+        justify-content: space-around;
+    }
+
+    nav ul li {
+        padding: 10px;
+        color: white;
+        font-size: initial;
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        color: white;
+    }
+
+    nav ul li a:hover {
+        font-size: larger;
+        color: rgb(211, 18, 18);
+    }
+
+    .descServLarga {
+        max-width: none;
+    }
+    .nosotros .foto {
+        max-height: 350px;
+        max-width: 400px;
+    }
+
+    .scroll {
+        height: 100%;
+        width: 100%;
+    }
+
+    .formServicios {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .datoFormTablaDinamica{
+        width: 33%;
+    }
+
+}

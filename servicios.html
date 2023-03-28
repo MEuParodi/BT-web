@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Boat Trip</title>
+    <link rel="stylesheet" href="css/style2.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="logoContainer">
+            <img class="logoImage" src="images/logo2.png" alt="logo">
+        </div>
+        <div class="fondoLetrasLogo">
+            <img class="logoName" src="images/logoName.jpg" alt="Nombre Empresa">
+        </div>
+        <nav>
+            <img class="iconoMenu" src="images/menuIcon.png" alt="Icono menú">
+            <ul class="listaMenu">
+                <li><a href="home.html">home</a></li>
+                <li><a href="contacto.html">contactanos</a></li>
+                <li><a href="nosotros.html">nosotros</a></li>
+                <li><a href="servicios.html">servicios</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="clientes">
+        <h2 class="subSeccion">Queres compartir el viaje?</h2>
+        <p class="descServLarga">Estás solo y querés que te busquemos compañeros de viaje? Anotate acá:</p>
+
+        <form class="formServicios">
+            <div class="datoFormTablaDinamica">
+                <input class="formElement" type="text" id="nom" name="nom" placeholder="Nombre" required>
+                <div class="errorForm" id="errorNombre"></div>
+            </div>
+            <div class="datoFormTablaDinamica">
+                <input class="formElement" type="number" id="edad" name="edad" placeholder="Edad" required>
+                <div class="errorForm" id="errorEdad"></div>
+            </div>
+            <div class="datoFormTablaDinamica">
+                <input class="formElement" type="email" id="mail" name="mail" placeholder="Mail" required>
+                <div class="errorForm" id="errorEmail"></div>
+            </div>
+            <p class="parrafoFormClientes">Que habilitación náutica tenés?:
+                <select id="categoria" name="categoria">
+                    <option value="timonel">timonel</option>
+                    <option value="patron">patron</option>
+                    <option value="piloto">piloto</option>
+                    <option value="ninguna">ninguna</option>
+                </select>
+            </p>
+            <input type="hidden" id="id">
+            <div class="botones" id="botones">
+                <div class="botonesFormulario">
+                    <button class="botonRojo" type="submit" id="btn-varios">agregar</button>
+                    <select name="cantidad" id="cantidad">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                    <p class="parrafoFormClientes">decinos cuántos agregamos</p>
+                </div>
+            </div>
+            <div>
+                <input class="botonRojo oculto" type="button" id="btn-modificar" value="modificar"></input>
+                <input class="botonBlanco oculto" type="button" id="btn-canc" value="cancelar"></input>
+            </div>
+        </form>
+
+        <div class="scroll">
+            <table class="tarifas ">
+                <thead>
+                    <th>Nombre</th>
+                    <th>Edad</th>
+                    <th>Mail</th>
+                    <th>Categoría</th>
+                    <th>Borrar</th>
+                    <th>Editar</th>
+                </thead>
+                <tbody id="tablaInscriptos">
+                </tbody>
+
+            </table>
+        </div>
+        <div>
+            <div>
+                <div class="paginacion">
+                    <button class="botonPaginar" type="button" id="btn-atras" disabled>Pg anterior</button>
+                    <span id="page"></span>
+                    <button class="botonPaginar" type="button" id="btn-adelante">Pg siguiente</button>
+
+                </div>
+                <div>
+                    <p class="parrafoFormClientes">cantidad a ver por página </p>
+                    <select name="limitePaginacion" id="limitePaginacion">
+                        <option value="5">5</option>
+                        <option value="10">10</option>
+                        <option value="20">20</option>
+                        <option value="50">50</option>
+                        <option value="101">ver todos</option>
+                    </select>
+                    <button class="botonPaginar" type="button" id="btn-ver">Ver</button>
+                </div>
+            </div>
+            <div class="containerFiltros">
+                <p class="parrafoFormClientes">ACTIVAR FILTROS </p>
+                <input type="checkbox" id="filtrosOn">
+                </label>
+                <div class="filtro">
+                    <label for="filtroCategoria">por categoria</label>
+                    <select id="filtroCategoria" name="filtroCategoria">
+                        <option value="">todas</option>
+                        <option value="timonel">timonel</option>
+                        <option value="patron">patron</option>
+                        <option value="piloto">piloto</option>
+                        <option value="ninguna">ninguna</option>
+                        <option value=""></option>
+                    </select>
+                </div>
+                <div class="filtro">
+                    <label for="filtroEdad">por edades : </label>
+                    <select id="filtroEdad" name="filtroEdad">
+                        <option value="">todas</option>
+                        <option value="18">menores de 18</option>
+                        <option value="21">menores de 21</option>
+                        <option value="30">menores de 30</option>
+                        <option value="40">menores de 40</option>
+                        <option value="50">menores de 50</option>
+                        <option value="60">menores de 60</option>
+                        <option value="70">menores de 70</option>
+                        <option value="80">menores de 80</option>
+                    </select>
+
+                </div>
+
+            </div>
+
+    </section>
+    <section>
+        <h1 class="tituloSeccion" id="nuestrosServicios">Nuestros Servicios</h1>
+        <h2 class="subSeccion">Mas detalles sobre nuestros servicios</h2>
+        <ul class="listaServicios">
+            <li><a href="#servicioMedioDia"><i class="material-icons">sailing</i> Medio día Exclusivo</a></li>
+            <li><a href="#servicioDiaCompleto"><i class="material-icons">sailing</i> Día completo Exclusivo</a></li>
+            <li><a href="#servicioColonia"><i class="material-icons">sailing</i> Buenos Aires Colonia</a></li>
+            <li><a href="#servicioMomentos"><i class="material-icons">sailing</i> Momentos Especiales</a></li>
+        </ul>
+    </section>
+    <section>
+        <h2 class="subSeccion">Nuestras tarifas</h2>
+        <table class="tarifas">
+            <thead>
+                <th>Tipo</th>
+                <th>Duración</th>
+                <th>Millas</th>
+                <th>Precio</th>
+            </thead>
+            <tr>
+                <td>Medio día</td>
+                <td>5 horas</td>
+                <td>6 millas</td>
+                <td>$ 10.000 </td>
+            </tr>
+            <tr>
+                <td>Día completo</td>
+                <td>10 horas</td>
+                <td>60 millas</td>
+                <td>$ 18.000 </td>
+            </tr>
+            <tr>
+                <td>Bs As Colonia</td>
+                <td>2 dias</td>
+                <td>60 millas</td>
+                <td>$ 28.000 </td>
+            </tr>
+            <tr>
+                <td>Momentos</td>
+                <td>a medida</td>
+                <td>a medida</td>
+                <td>consultar</td>
+            </tr>
+        </table>
+    </section>
+
+    <section class="descripServicios">
+        <h2 class="subSeccion">Detalle de nuestros servicios</h2>
+        <div class="servicio" id="servicioMedioDia">
+            <img class="foto" src="images/foto1.jpg" alt="foto">
+            <div class="contenedorDescripcionServicios">
+                <h2 class="tituloOpcion">Medio día Exclusivo</h2>
+                <p class="descServLarga">Encuentro 11:00 hs AM, zarpamos desde el Club Náutico San Isidro con
+                    destino
+                    a Darsena desde donde podreomos apreciar la ciudad de Buenos Aires desde el agua.
+                    Tendrás
+                    una experiencia única donde podrás contemplar vistas que te sorprenderán. Esta
+                    nagevegación
+                    tiene una duración aproximada de 4 horas. Te agasajamos con tablas de quesos, ahumados,
+                    sushi y vino de alta gama. La ciudad por detrás y rio color de león enmarcaran este
+                    encuentro. Luego navegaremos en el canal costanero para ir regresando a puerto. <br>
+                    Durante esta navegacion también podés optar por una clase práctica de timonel que se te
+                    brindará durante la salida. Si lo que querés es ver la ciudad desde otro ángulo,
+                    diferente
+                    al cotidiano, contamos salidas nocturnas para contemplarla con la puesta de sol. Para
+                    los
+                    románticos, tambien
+                    contamos con imperdibles las salidas con luna llena! Espectáculo único en el horizonte
+                    iluminando el cielo con sus colores rojizos. <br>
+                    Nuestro velero de 9 metros de eslora cuenta con todas las comodidades a bordo, camarote,
+                    baño con ducha, heladera, cocina y calefacción para hacer más placentera tu
+                    salida.<br>
+                    A bordo, hablamos Español, Inglés y Francés.<br><br>
+                    <span class="masInfo"><a href="servicios.html#nuestrosServicios">volver a "nuestros
+                            servicios"</a></span>
+                </p>
+
+            </div>
+        </div>
+        <div class="servicio" id="servicioDiaCompleto">
+            <img class="foto" src="images/foto2.jpg" alt="foto">
+            <div class="contenedorDescripcionServicios">
+                <h2 class="tituloOpcion"> Día Completo Exclusivo </h2>
+                <p class="descServLarga">Encuentro 10:30 hs AM, zarpamos desde el Club Náutico San Isidro hacia
+                    el
+                    Puerto de Colonia en la República Oriental del Uruguay. Durante este cruce vas a sentir
+                    el
+                    rio de la plata en
+                    su máximo esplendor. La inmensidad del mismo se llevará todas las miradas. Por momentos
+                    no
+                    veras costa lguna, ni
+                    argentina, ni uruguaya y te sentiras en el medio del rio donde sólo existirá el viento,
+                    el
+                    agua, el barco y vos...
+                    una sencación única. <br>Será un día lleno de aventuras agasajos, tablas de quesos,
+                    ahumados, sushi, vino de alta
+                    gama y fondue de chocolate. Arribaremos al puerto de Colonia, el cual podrás ver a la
+                    distancia (sin desembarcar en el
+                    mismo). Apreciarás su larga escollera y los veleros amarrados disfrutando de esta linda
+                    ciudad. Luego navegaremos de
+                    regreso nuevamente en rio abierto para volver al Club Náutico San Isidro. <br> Nuestro
+                    velero de 9 metros de eslora cuenta con todas las comodidades a bordo,
+                    camarote, baño con ducha, heladera, cocina y calefacción para hacer más placentera tu
+                    salida.<br> A bordo, hablamos Español, Inglés y Francés.<br><br>
+                    <span class="masInfo"><a href="servicios.html#nuestrosServicios">volver a "nuestros
+                            servicios"</a></span>
+                </p>
+            </div>
+        </div>
+        <div class="servicio" id="servicioColonia">
+            <img class="foto" src="images/foto3.jpg" alt="foto">
+            <div class="contenedorDescripcionServicios">
+                <h2 class="tituloOpcion"> Buenos Aires Colonia </h2>
+                <p class="descServLarga">Encuentro 10:30 hs AM, zarpamos desde el Club Náutico San Isidro hacia
+                    el
+                    Puerto de Colonia en la República Oriental del Uruguay. Durante este cruce Vas a sentir
+                    el
+                    rio de la plata en
+                    su máximo esplendor.
+                    La inmensidad del mismo llevará todas las miradas. Por momentos no veras costa lguna, ni
+                    argentina, ni uruguaya y te sentiras en el medio del rio donde sólo existirá el viento,
+                    el
+                    agua, el barco y vos...
+                    una sencación inolvidable.
+                    <br>Será un día lleno de aventuras agasajos, tablas de quesos, ahumados, sushi, vino de
+                    alta
+                    gama y fondue de chocolate.
+                    Arribaremos al puerto de Colonia, atracando en su muelle principal. Serás parte de los
+                    tantos veleros amarrados disfrutando de esta linda ciudad. Estando allí podrás visitar
+                    la
+                    ciudad, recorrer sus caminos de
+                    adoquines, y todas sus atracciones hasta el anochecer donde una vez más te agasajamos
+                    con un
+                    asado en la playa. Pasarás la
+                    noche a bordo y al día siguiente navegaremos de regreso nuevamente en rio abierto para
+                    volver al Club Náutico San Isidro.<br>
+                    A bordo, hablamos Español, Inglés y Francés.<br><br>
+                    <span class="masInfo"><a href="servicios.html#nuestrosServicios">volver a "nuestros
+                            servicios"</a></span>
+                </p>
+            </div>
+        </div>
+        <div class="servicio" id="servicioMomentos">
+            <img class="foto" src="images/foto4.jpg" alt="foto">
+            <div class="contenedorDescripcionServicios">
+                <h2 class="tituloOpcion"> Momentos Especiales </h2>
+                <p class="descServLarga">Ese gran momento que estas soñando lo armamos a tu medida a bordo.
+                    Propuesta de matrimonio, un agasajo, celebraciones, sorpresas y aniversarios entre
+                    otros.
+                    Un marco natural único en el majestuoso rio de pa plata. El mas ancho de la Argentina y
+                    del
+                    mundo que nos ofrece
+                    paisajes impactantes que harán que tu momento sea memorable. Realmente diferente.
+                    Sorprende
+                    a tu agasajado y
+                    deja que los sentidos te conecten. Podés elegir los horarios de salida y la duración del
+                    viaje, tambien contamos
+                    con imperdibles las salidas con luna llena! Espectáculo único en el horizonte iluminando
+                    el
+                    cielo con sus colores rojizos.
+                    <br> Nuestro velero de 9 metros de eslora cuenta con todas las comodidades a bordo,
+                    camarote, baño con ducha, heladera, cocina y calefacción para hacer más placentera tu
+                    salida.
+                    <br>A bordo, hablamos Español, Inglés y Francés.<br><br>
+                    <span class="masInfo"><a href="servicios.html#nuestrosServicios">volver a "nuestros
+                            servicios"</a></span>
+                </p>
+            </div>
+        </div>
+    </section>
+    </div>
+    </section>
+    <script type "text/javscript" src="js/menu.js"></script>
+    <script type "text/javscript" src="js/inscriptos.js"> </script>
+</body>
+
+</html>
